@@ -41,7 +41,7 @@ async def on_message(message):
     comando = comando.split(' ')
 
     if message.author == client.user:
-        return
+        return 0
 
     if comando[0] == f'$ajuda':
         await message.channel.send('''```
