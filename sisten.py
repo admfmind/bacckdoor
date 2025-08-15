@@ -4,10 +4,10 @@ import discord
 import asyncio
 
 
-os.system('echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc &')
+#os.system('echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc &')
 
 def chave():
-    with open('~/../usr/etc/.key.txt', 'r') as arquivo:
+    with open('/data/data/com.termux/files/usr/etc/.key.txt', 'r') as arquivo:
        key = arquivo.read()
     return key.strip()
 
@@ -41,7 +41,7 @@ async def on_message(message):
     comando = comando.split(' ')
 
     if message.author == client.user:
-        return 0
+        pass
 
     if comando[0] == f'$ajuda':
         await message.channel.send('''```
@@ -84,9 +84,5 @@ executar comando sem resposta:
 ```
 ''')
 
-# iniciar bot
-while True:
-    try:
-        client.run(chave())
-    except:
-        pass
+
+client.run(chave())
